@@ -1,0 +1,67 @@
+.body{
+    /* 1. Reset default browser spacing */
+    margin: 0;
+    padding: 0;
+
+    /* 2. Turn the body into a flex container */
+    display: flex;
+
+    /* 3. Center horizontally and vertically */
+    justify-content: center;
+    align-items: center;
+
+    /* 4. Force the body to take up the full screen height */
+    min-height: 100vh;
+
+    /* Optional background color for context */
+    background-color: #012254; 
+}
+
+.calculator-body{
+    /* 1. Size Constraints */
+    width: 100%;
+    max-width: 360px; /* Keeps it a perfect mobile-friendly desktop size */
+    
+    /* 2. Visual Theme & Background */
+    background-color: #1e1e24; /* Dark slate gray background */
+    border-radius: 24px;       /* Smooth, modern rounded corners */
+    padding: 24px;             /* Interior breathing room for components */
+    
+    /* 3. Layout Control */
+    display: flex;
+    flex-direction: column;    /* Stack the input and button grid vertically */
+    gap: 20px;                 /* Clean spacing between screen and keys */
+    
+    /* 4. Depth & Polish */
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25); /* Subtle shadow for depth */
+    box-sizing: border-box;    /* Prevents padding from breaking width math */
+}
+
+.calculator-input{
+    /* 1. Structural Dimensions */
+    width: 100%;
+    height: 80px;             /* Gives the display screen plenty of height */
+    padding: 0 16px;          /* Side padding keeps numbers from hugging the edges */
+    box-sizing: border-box;   /* Includes padding inside the width and height */
+
+    /* 2. Text Formatting */
+    font-family: 'Courier New', Courier, monospace; /* Digital, retro font style */
+    font-size: 2.5rem;        /* Makes numbers large and easy to read */
+    text-align: right;        /* Numbers in calculators always align to the right */
+    color: #ffffff;           /* Bright white text for optimal legibility */
+
+    /* 3. Screen Aesthetics */
+    background-color: #0f0f12; /* Darker background than the body for contrast */
+    border: none;             /* Removes the ugly default browser border */
+    border-radius: 12px;      /* Soft rounded corners to match the outer body */
+    
+    /* 4. Interaction Overrides */
+    outline: none;            /* Removes focus ring highlight when clicked */
+    cursor: default;          /* Stops text cursor from showing on hover */
+}
+
+.calculator-buttons-grid{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr); /* Prepares a standard 4-column layout */
+    gap: 12px; /* Leaves spacing between future buttons */
+}
