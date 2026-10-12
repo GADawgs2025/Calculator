@@ -21,7 +21,11 @@ const power = function (a, b) {
   return a ** b;
 };
 
+//Retrieve Labels from HTML:
+const inputLabel = document.querySelector('.calculator-input');
 const buttonGrid = document.querySelector('.calculator-buttons-grid');
+
+//Create Array for Buttons
 const buttons = [
     {label: "1",type:"number" ,name: "One"},
     {label: "2",type:"number" ,name: "Two"},
@@ -68,5 +72,43 @@ buttonGrid.append(... buttonDisplay);
 //Function to handle Click Event
 function handleInput(button){
     console.log(`Clicked: ${button.name} | Label: ${button.label} | Type: ${button.type}`);
+    //Numbers:
+    if(button.label === "1"){
+        inputLabel.value += `${button.label}`;
+    }
+    else if (button.label === "2"){
+        inputLabel.value += `${button.label}`;
+    }
+    else if (button.label === "3"){
+        inputLabel.value += `${button.label}`;
+    }
+    else if (button.label === "4"){
+        inputLabel.value += `${button.label}`;
+    }
+    else if (button.label === "5"){
+        inputLabel.value += `${button.label}`;
+    }
+    else if (button.label === "6"){
+        inputLabel.value += `${button.label}`;
+    }
+    else if (button.label === "7"){
+        inputLabel.value += `${button.label}`;
+    }
+    else if (button.label === "8"){
+        inputLabel.value += `${button.label}`;
+    }
+    else if (button.label === "9"){
+        inputLabel.value += `${button.label}`;
+    }
+    else if (button.label === "0"){
+        inputLabel.value += `${button.label}`;
+    }
+    //Operations:
+    //Clear:
+    else if(button.label === "C"){
+        if(inputLabel.value){
+            inputLabel.value = "";
+        }
+    }
 }
 
