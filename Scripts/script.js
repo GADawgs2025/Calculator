@@ -126,7 +126,7 @@ function handleInput(button){
                 currentOp.number1 = operate(currentOp);
                 isCalculationFinished = true;
                 inputLabel.value = currentOp.number1;
-
+ 
                 //Reset Number2
                 currentOp.number2 = 0;
                 isSecondNumberSet = false;
@@ -137,10 +137,10 @@ function handleInput(button){
         if(isCalculationFinished){
             currentOp.operator = ""; //Restore to default
         }
-        else{
+        else{2
             currentOp.operator = button.label === "X" ? "*" : button.label;
         }
-        
+        22
         
         console.log("* stored as operation", operationArray);
     }
