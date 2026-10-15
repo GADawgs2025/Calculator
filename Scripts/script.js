@@ -16,7 +16,8 @@ const multiply = function (array) {
 
 const divide = (array)=>{
     return array.reduce((total,current)=> total/current);
-}
+};
+
 const power = function (a, b) {
   return a ** b;
 };
@@ -194,10 +195,12 @@ function operate (array){
         return subtract(array.number1,array.number2);
     }
     else if (array.operator === "*"){
-        return multiply(array);
+         //  Wrap the values in an array so reduce() works
+        return multiply([array.number1,array.number2]);
     }
     else if (array.operator === "/"){
-        return divide(array);
+         //  Wrap the values in an array so reduce() works
+        return divide([array.number1,array.number2]);
     }
     else{
         return 
